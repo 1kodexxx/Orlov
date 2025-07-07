@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/logo.svg";
 import { Button, Marquee } from "../common";
 
 const Hero = () => {
@@ -84,7 +83,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1 flex items-center justify-center mb-8 md:mb-0">
             <img
-              src={heroImage}
+              src="/logo.svg"
               alt="Orlov Hero"
               className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] rounded-lg object-cover"
             />
