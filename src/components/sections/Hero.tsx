@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Button, Marquee } from "../common";
+import { Button, Marquee, Loader } from "../common";
 
 const Hero = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Предзагрузка изображения
+    const img = new Image();
+    img.src = "/logo.svg";
+    img.onload = () => setIsImageLoaded(true);
+  }, []);
+
   return (
     <section
       className="relative w-full overflow-x-hidden flex flex-col"
@@ -81,12 +91,16 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex-1 flex items-center justify-center mb-8 md:mb-0">
-            <img
-              src="/logo.svg"
-              alt="Orlov Hero"
-              className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] rounded-lg object-cover"
-            />
+            className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[320px] sm:min-h-[480px] md:min-h-[720px]">
+            {isImageLoaded ? (
+              <img
+                src="/logo.svg"
+                alt="Orlov Hero"
+                className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] rounded-lg object-cover"
+              />
+            ) : (
+              <Loader />
+            )}
           </motion.div>
         </div>
       </div>
