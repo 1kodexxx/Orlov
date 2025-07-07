@@ -8,7 +8,7 @@ const Hero = () => {
   useEffect(() => {
     // Предзагрузка изображения
     const img = new Image();
-    img.src = "/logo.svg";
+    img.src = "/logo.png"; // Путь к PNG
     img.onload = () => setIsImageLoaded(true);
   }, []);
 
@@ -94,7 +94,7 @@ const Hero = () => {
             className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[320px] sm:min-h-[480px] md:min-h-[720px]">
             {isImageLoaded ? (
               <img
-                src="/logo.svg"
+                src="/logo.png" // Путь к PNG
                 alt="Orlov Hero"
                 className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] rounded-lg object-cover"
               />
