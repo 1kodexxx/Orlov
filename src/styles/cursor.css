@@ -1,0 +1,24 @@
+/* body {
+  cursor: url("/cursor/cursor.png"), auto;
+}
+
+a,
+button,
+select,
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"],
+[role="button"],
+[class*="cursor-pointer"],
+.cursor-pointer {
+  cursor: url("/cursor/cursor-pointer.png"), pointer !important;
+}
+
+.cursor-pointer svg {
+  cursor: url("/cursor/cursor-pointer.png"), pointer !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  cursor: url("/cursor/cursor-pointer.png"), pointer !important;
+} */
