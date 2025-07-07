@@ -17,15 +17,18 @@
   <p><strong>Главная страница</strong></p>
 </div>
 
-<div align="center">
-  <img src="./public/gifs/orlov-brand3.gif" alt="Каталог товаров" width="300" />
-  <p><strong>Каталог товаров</strong></p>
-</div>
-
-<div align="center">
-  <img src="./public/gifs/orlov-brand4.gif" alt="Страница оформления" width="300" />
-  <p><strong>Страница оформления</strong></p>
-</div>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./public/gifs/orlov-brand3.gif" alt="Каталог товаров" width="300" />
+      <p><strong>Каталог товаров</strong></p>
+    </td>
+    <td align="center">
+      <img src="./public/gifs/orlov-brand4.gif" alt="Страница оформления" width="300" />
+      <p><strong>Страница оформления</strong></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
