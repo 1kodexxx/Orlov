@@ -1,4 +1,4 @@
-# Orlov Brand Elite Shop 🖤 — Магазин премиальных чехлов для телефонов
+# Orlov Brand Elite Shop 👑 — Магазин премиальных чехлов для телефонов
 
 <div align="center">
   <img src="./public/web-app-manifest-512x512.png" alt="Orlov Brand Logo" width="200" />
