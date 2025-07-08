@@ -121,13 +121,13 @@ const Hero = () => {
         </div>
 
         {/* мобильная бегущая строка */}
-        <div className="absolute bottom-0 left-0 w-full h-[32px] overflow-hidden md:hidden">
+        <div className="absolute pt-10  bottom-0 left-0 w-full h-[32px] overflow-hidden md:hidden">
           <Marquee />
         </div>
       </section>
 
       {/* фиксированная бегущая строка на десктоп */}
-      <div className="absolute bottom-0 left-0 w-full h-[32px] overflow-hidden hidden md:block z-20">
+      <div className="absolute pt-10 bottom-0 left-0 w-full h-[32px] overflow-hidden hidden md:block z-20">
         <Marquee />
       </div>
     </>
