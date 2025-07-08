@@ -2,20 +2,18 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button, Marquee, Loader } from "../common";
 
-const HEADER_HEIGHT_REM = 3; // высота header в rem
-const MARQUEE_HEIGHT_PX = 32; // высота бегущей строки в px
+const HEADER_HEIGHT_REM = 3;
+const MARQUEE_HEIGHT_PX = 32;
 
 const Hero = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  // предзагрузка лого
   useEffect(() => {
     const img = new Image();
     img.src = "/logo.png";
     img.onload = () => setIsImageLoaded(true);
   }, []);
 
-  // рассчитываем --vh как 1% от window.innerHeight
   useEffect(() => {
     const setVh = () => {
       document.documentElement.style.setProperty(
@@ -32,12 +30,9 @@ const Hero = () => {
     <section
       className="relative w-full overflow-hidden flex flex-col"
       style={{
-        // height = 100% реального view-height – 3rem (header)
-        height: `calc(var(--vh, 1vh)*100 - ${HEADER_HEIGHT_REM}rem)`,
-        // отступ под бегущую строку
+        minHeight: `calc(var(--vh, 1vh)*100 - ${HEADER_HEIGHT_REM}rem)`,
         paddingBottom: `${MARQUEE_HEIGHT_PX}px`,
       }}>
-      {/* keyframes */}
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(100%); }
@@ -45,7 +40,6 @@ const Hero = () => {
         }
       `}</style>
 
-      {/* фон */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -55,10 +49,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/65" />
       </div>
 
-      {/* контент, чуть приподнятый */}
       <div className="relative z-10 flex-1 flex items-center w-full pb-8 transform -translate-y-4">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8 w-full">
-          {/* текст */}
           <div className="flex-1 text-white space-y-6 transform -translate-y-2">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -88,11 +80,13 @@ const Hero = () => {
                 © IVAN ORLOV
               </span>
             </motion.p>
+
+            {/* Центрируем кнопку на мобилке */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex flex-col md:flex-row gap-4 max-w-xs mx-auto md:mx-0">
+              className="flex flex-col md:flex-row gap-4 mx-auto md:mx-0 justify-center md:justify-start items-center">
               <Button
                 initialText="Перейти в каталог 💎"
                 hoverText="Поехали! 🚀"
@@ -101,12 +95,11 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* логотип */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[320px] sm:min-h-[480px] md:min-h-[720px] transform -translate-y-2">
+            className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[300px] sm:min-h-[360px] md:min-h-[720px] transform -translate-y-2">
             {isImageLoaded ? (
               <img
                 src="/logo.png"
@@ -120,7 +113,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* бегущая строка внизу Hero */}
       <div className="absolute bottom-0 left-0 w-full h-8 overflow-hidden">
         <Marquee />
       </div>
