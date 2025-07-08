@@ -31,7 +31,7 @@ const Hero = () => {
     <>
       {/* Hero Section */}
       <section
-        className="relative h-0 w-full overflow-hidden flex flex-col"
+        className="relative w-full overflow-hidden flex flex-col"
         style={{
           minHeight: `calc(var(--vh, 1vh)*100 - ${HEADER_HEIGHT_REM}rem)`,
         }}>
