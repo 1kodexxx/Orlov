@@ -14,7 +14,7 @@
 ## 🎥 Превью
 
 <div align="center">
-  <img src="./public/gifs/orlov-brand.gif" alt="Главная страница" width="600" />
+  <img src="./public/gifs/orlov-brand1.gif" alt="Главная страница" width="600" />
   <p><strong>Главная страница</strong></p>
 </div>
 
