@@ -106,7 +106,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[300px] sm:min-h-[360px] md:min-h-[720px] transform -translate-y-2">
+              className="flex-1 flex items-center justify-center mb-8 md:mb-0 min-h-[300px] sm:min-h-[360px] md:min-h-[650px] transform -translate-y-2">
               {isImageLoaded ? (
                 <img
                   src="/logo.png"
